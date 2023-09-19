@@ -1,0 +1,196 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+.container
+{ 
+
+    background-image: url("background.jpeg");
+    background-color: rgb(63, 61, 61);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.login-container
+{
+
+background-color:rgb(92, 87, 87);
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 567px;
+height: 639px;
+top: 148px;
+left: 443px;
+border-radius: 2px;
+border: 0.6000000238418579px;
+background: linear-gradient(0deg, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3)),
+linear-gradient(0deg, rgba(240, 240, 240, 0.2), rgba(240, 240, 240, 0.2));
+border: 0.6px solid #F0F0F033;
+row-gap: 40px;
+padding: 20px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 10px; */
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.top img{
+    height: 100px;
+    width: 100px;
+    /* top: 185px; */
+    /* left: 670px; */
+
+    margin: 10px;
+}
+.company-name{
+width: 83px;
+height: 41px;
+top: 296px;
+left: 679px;
+font-family: 'Oswald';
+font-size: 28px;
+font-weight: 600;
+line-height: 41.5px;
+letter-spacing: 0em;
+text-align: center;
+margin: 10px;
+
+}
+.login{
+    width: 57px;
+    height: 22px;
+    /* top: 370px;
+    left: 692px; */
+    font-family: 'Oswald';
+    font-size: 24px;
+   font-weight: 500;
+   line-height: 22px;
+   text-align: center;
+
+     
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 478px;
+    color: white;
+}
+
+.password{
+    margin-top: 10px;
+    
+}
+
+.details div input{
+    width: 450px;
+    height: 46px;
+    padding-left: 40px;
+    border-radius: 2px;
+    border: none;
+    color: #777777;
+    background-color: #1d1c1c ;
+}
+
+.details div input:focus{
+    outline: .01px solid #DCF763;
+}
+
+.extrablock{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    gap: 4.5rem;
+    margin-top: -30px;
+    color: white;
+    width:478px;
+}
+
+.extrablock .forgot a{
+    color: #fff; text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.14px;
+}
+
+.login-button{
+    background-color:#906DD5;
+    width: 120px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.account{
+    color: white;
+}
+
+.account a{
+    color:#e7ff7b;
+}
+::placeholder{
+    font-family: 'Oswald';
+    font-size: 14px;
+}
+.remind{
+    display: flex;
+}
+.remind div label{
+    font-size: 14px;
+    letter-spacing: 0.14px
+}
+
+.remind input[type=checkbox]{
+   appearance: none;
+   position: relative;
+   height: 16px;
+   width: 16px;
+   background-color: #3c3b3b;
+   top: 4px;
+    cursor: pointer;
+}
+.remind input[type=checkbox]::before{
+    position:absolute;
+    content: '\2713';
+    color:white;
+    font-size: 15px;
+    line-height: 15px;
+    top: -1.2px;
+    left: 2px;
+    transform: scale(0);
+
+}
+.remind input[type=checkbox]:checked::before{
+    transform: scale(1);
+}
+
+
+.text{
+    position: relative;
+}
+
+.icon{
+    position: absolute;
+    top: 13px;
+    left: 10px;
+    color: #DCF763;
+    
+}
+

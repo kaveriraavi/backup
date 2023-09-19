@@ -1,0 +1,309 @@
+*{
+    margin:0;
+    padding:0;
+}
+.screen-container{
+    height:100vh;
+    background-color: #101010;
+    display:flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    min-height:60px;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px ;
+    color:white;
+    font-family: 'Oswald';
+    box-shadow: 0px -1px 0px 0px #F0F0F033 inset;
+   
+}
+.header-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+   
+
+}
+.logo img{
+    width:32px;
+    height:32px;
+}
+.company-name{
+    
+    font-size: 18px;
+    line-height: 26.68px;
+    padding-left:6px;
+    padding-bottom:5px;
+}
+.avatar img{
+    width:30px;
+    height:30px;
+}
+.name{
+    font-size: 16px;
+    padding-left:6px;
+    padding-bottom:4px;
+}
+.container{
+    display:flex;
+    box-sizing: border-box;
+    overflow-x:hidden;
+}
+.management{
+    color:white;
+    font-family: 'Oswald';
+    font-size:14px;
+  width:220px;
+  
+
+    border-right:0.5px solid #393937;
+   
+}
+.management-1{
+    display:flex;
+    flex-direction: row;
+    padding-top:15px;
+    padding-left:20px;
+    
+} 
+.group-2{
+    padding-left:20px;
+}
+.icon{
+    color:#D7FD2C;
+}
+.group{
+    color:#D7FD2C;
+    padding-left:20px;
+}
+.block{
+    background-color: #171616;
+    width:100%;
+    height:calc(100%-60px);
+    font-family:'Oswald';
+   padding-left:16px;
+  padding-right:20px;
+  overflow: auto;
+ 
+    
+}
+.band{
+    color:white;
+    font-family: 'Oswald';
+    font-size:20px;
+    font-weight: 500px;
+    line-height: 24px;
+   margin-top:20px;
+   
+
+}
+.block-1{
+    display:flex;
+    flex-direction: row;
+   background-color: #393937;
+   margin-top:30px;
+   
+
+
+}
+.instrument{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:358px;
+  
+    border-right:0.1px solid #1d1c1c; 
+    position: relative;
+} 
+
+.icon-1  {
+    position: absolute;
+    color:white;
+    padding-top:10px;
+    
+} 
+.icon-2{
+    padding-right:10px;
+}
+
+.information{
+ width:810px;
+    margin-left:30px; 
+    padding-top:15px;
+
+}
+.rocks{
+    display:flex;
+    justify-content: space-between;
+}
+.text-1{
+    color:white;
+    font-family: 'Oswald';
+    font-size:24px;
+    line-height: 22px; 
+}
+
+
+.join{
+    color:#282727
+}
+.date{
+    color:white;
+    font-family:'Oswald';
+    padding-top:15px;
+    
+}
+.about{
+    color:#282727; 
+}
+.info{
+    font-family:'Oswald';
+    font-size:16px;
+    color:white;
+    padding-top: 15px;
+    word-spacing: 4px;
+}
+
+.members{
+    display:flex;
+   
+    justify-content: space-between;
+    margin-top:10px;
+    font-family: 'Oswald';
+    color:white;
+
+}
+.band-members{
+    font-size:18px;
+}
+.button {
+    background-color: #906DD5;
+    border-radius:20px;
+    width:120px;
+    height:30px;
+    cursor: pointer;   
+    
+}
+.invite{
+    font-family:'Oswald';
+    font-size:16px;
+   padding-left:5px;
+}
+.icon-4{
+    padding-left:10px;
+}
+.images{
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    padding-top:8px;
+    
+}
+
+.image img{
+    width:60px;
+}
+.text{
+    display:flex;
+    gap:15px;
+    color:white;
+    border-bottom:0.5px solid white;
+    margin-top: 10px;
+
+}
+.gal{
+    color:#906DD5;
+    border-bottom:4px solid#906DD5; 
+}
+.del{
+    margin-left: 96%;
+    padding-top: 5px;
+    font-family: 'Oswald';
+    color: #FF4D4F;
+
+}
+.photos{
+display:flex;
+gap:10px;
+padding-top:10px;
+
+
+}
+.photo{
+    background-color: #393937;
+    color:white;
+   width:194px;
+   height:170px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.photo-1{
+    position:relative;
+}
+
+
+.photo-1 img{
+    width:194px;
+height:170px;
+   
+}
+
+.pics{
+    display:flex;
+    gap:10px;
+    padding-top: 10px;
+   
+}
+
+
+
+
+.check{
+    
+    position:absolute;
+    right:10px;
+    top:20px; 
+    color:#906DD5;
+}
+.square{
+    position:absolute;
+    color:white;
+    top:20px;
+    right:10px;
+}
+.square-1{
+    position:absolute;
+    color:white;
+    top:20px;
+    right:10px;
+}
+.pen{
+    position:absolute;
+    color:white;
+    bottom:80px;
+    left:70px;
+   
+    
+    
+}
+.trash{
+    color:white;
+    position:absolute;
+    top:75px;
+    right:70px;
+
+    
+}
+
+
+
+
+    
+    
+

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const data = [
+    {
+        name: "Butters",
+        age: 3,
+        type: "dog"
+    },
+    {
+        name: "Lizzy",
+        age: 6,
+        type: "dog"
+    },
+    {
+        name: "Red",
+        age: 1,
+        type: "cat"
+    }, {
+        name: "Joey",
+        age: 3,
+        type: "dog"
+    }
+];
+// Q1.Write a promise
+// function which will display all records with type === 'dog'
+// function Name-- - > findAllDogs(data)
+// If there are no records matching criteria then reject with message "NO RECORDS FOUND"
+// If there are records matching criteria then resolve with the data in form of array
+// HINT: Use filter.
+function findAllDogs(data){
+    let word ="dog";
+    return new Promise((resolve, reject) => 
+    {
+      let arr1=data.filter(n=>n.type.includes(word));
+      if(arr1.lenght!=0){
+        resolve(arr1);
+      }
+      else{
+        reject("NO RECORDS FOUND");
+      }
+     });
+    
+}
+findAllDogs(data).then(message=>{
+    console.log(message);
+}).catch(error=>{
+    console.log(error);
+})
+// Q2.Write a promise
+// function which will display all the records starting with name 'B'
+// or any character passed as parameter.
+// function Name-- - > findSpecificStartChar(data, 'B')
+// If there are no records matching criteria then reject with message "NO RECORDS FOUND"
+// If there are records matching criteria then resolve with the data in form of array.
+// HINT: Use filter and string functions.
+function findSpecificStartChar(data){
+    return new Promise((resolve, reject) => {
+        let arr1=data.filter(n=>n.name.startsWith('B'));
+        if(arr1.lenght!=0){
+            resolve(arr1);
+        }
+        else{
+            reject("NO RECORDS FOUND");
+        }
+    });
+}
+findSpecificStartChar(data).then(message=>{
+    console.log(message);
+}).catch(error=>{
+    console.log(error);
+})
+// Q3.Write a promise
+// function which will display sum of all ages.
+// function Name-- - > findSumAges(data)
+// If there are no records matching criteria then reject with message "NO RECORDS FOUND"
+// If there are records matching criteria then resolve with the data in form of array.
+// HINT: Use reduce functions.
+function findSumAges(data){
+    return new Promise((resolve, reject) => {
+        let arr1 = data.reduce((sum,num)=>{
+            sum=sum+num.age;
+            return sum;
+        },0);
+        if(arr1.lenght!=0)
+        {
+            resolve(arr1);
+        }
+        else
+        {
+            reject("NO RECORDS FOUND");
+        }
+
+    })
+}
+findSumAges(data).then(message=>{
+    console.log('Sum:',message);
+}).catch(error=>{
+    console.log(error);
+})
+// Q4.Write a promise
+// function which will display all the records with only name & ages.
+// function Name-- - > findAll(data)
+// If there are no records matching criteria then reject with message "NO RECORDS FOUND"
+// If there are records matching criteria then resolve with the data in form of array.
+// HINT: Use map.
+function findAll(data){
+    return new Promise((resolve, reject) => {
+    let arr1 = data.map(n=>({
+    name:n.name,
+    age:n.age,
+    
+}));
+if(arr1.lenght!=0)
+{
+    resolve(arr1);
+}
+else
+{
+    reject("NO RECORDS FOUND");
+}
+ })
+}
+findAll(data).then(message=>{
+console.log(message);
+}).catch(error=>{
+    console.log(error);
+})
+// Q5.Write a
+// function to display sum of all ages of records having type as dog.
+// Use nesting promises
+// function which first call Q1
+// function its output will be given to Q3 and display total.
+// HINT: nesting of promises.
+findAllDogs(data)
+    .then(dogRecords=>findSumAges(dogRecords))
+    .then(sum=>{
+        console.log('Sum: ',sum)})
+
+
+// Q6.Write a promise
+// function which will display all the records in sorting according to names.
+// function Name-- - > Sorting(data, 'ASC')
+// ASC - > ASCENDING / DESC - > DESCENDING
+// If there are no records in array reject with message "NO RECORDS"
+// If there are records in Array then according to sorting order display result and
+// return inresolve of promises.
+// HINT: sort on objects.
+function Sorting(data){
+    return new Promise((resolve, reject) => {
+        let arr1 = data.sort((a,b)=>{
+            if(a.name<b.name)
+            {
+                return -1;
+            }
+            if(a.name>b.name)
+            {
+                return 1;
+            }
+            else
+            {
+             return 0;
+            }
+        })
+        if(arr1.lenght!=0)
+        {
+            resolve(arr1);
+        }
+        else 
+        {
+           reject("NO RECORD");
+        }
+    })
+}
+Sorting(data).then(message=>{
+    console.log(message);
+}).catch(error=>{
+    console.log(error);
+})
+    </script>
+</body>
+</html>

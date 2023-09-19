@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = [{
+            id: 2,
+            name: "Jonathon Haley",
+            username: "Monte.Weber2",
+            email: "Daphne43@yahoo.com",
+            phone: "1-563-675-1857 x11708",
+            website: "carmela.net",
+            password: "hashed_password",
+            age: 34
+        },
+        {
+            id: 3,
+            name: "Dean John",
+            username: "dd.1",
+            email: "deno@google.com",
+            phone: "1-123-543-1857 123212",
+            website: "dd.net",
+            password: "Dean_hashed_password",
+            age: 23
+        },
+        {
+            id: 4,
+            name: "demon slayer",
+            username: "dd.1",
+            email: "deno@google.com",
+            phone: "1-123-543-1857 123212",
+            website: "dd.net",
+            password: "Dean_hashed_password",
+            age: 21
+        }
+        ];
+        const newUser = {
+            id: 1,
+            name: "John doe",
+            username: "mrjohn",
+            phone: "1-563-675-1857 x11708",
+            website: "carmela.net",
+            password: "hashed_password",
+            age: 34
+        }
+        // Q1.Write a function to add a new record at the end of array users using spread operator,
+        //     functions: addLast(users, temp)
+        function addLast(users, temp) {
+            let arr1 = [...users, temp];
+            console.log(arr1);
+        }
+        addLast(users, newUser);
+
+
+
+        /*
+        Q2.Write a function to add a new record at the begining of array users using spread operator,
+            functions: addFirst(users, temp)
+        */
+        function addFirst(users, temp) {
+            let arr = [temp, ...users];
+            console.log(arr);
+        }
+        addFirst(users, newUser);
+        /*
+        Q3. Write a  function to display all records only 3 fields id,name,username.
+        functions : display(users)
+        HINT : map
+        */
+        function display(users) {
+            let arr = users.map(n => ({
+                id: n.id,
+                name: n.name,
+                username: n.username,
+            }));
+            console.log(arr);
+        }
+        display(users);
+        // Q4. Write a  function which will display all records  with name ==='demon'
+        // function Name ---> findNameEquals(users)
+        // HINT : Use filter.
+        function findNameEquals(users) {
+            let word = "demon";
+            arr = users.filter(n => n.name.includes(word));
+
+            console.log(arr);
+        }
+        findNameEquals(users);
+
+        // Q5. Write a  function which will display all the records starting with name 'B' or any character passed as parameter.
+        // function Name ---> findSpecificStartChar(users,'B')
+        // HINT : Use filter and string functions.
+        function findSpecificStartChar(users) {
+            let arr = users.filter(n => n.name.startsWith('B'));
+            console.log(arr);
+        }
+        findSpecificStartChar(users);
+        // Q6. Write a  function which will display sum of all ages.
+        // function Name ---> findSumAges(users) .
+        // HINT : Use reduce functions.
+        function findSumAges(users) {
+            let s = users.reduce((sum, n) => {
+                sum = sum + n.age;
+                return sum;
+            }, 0)
+            console.log(s);
+        }
+        findSumAges(users);
+        // Q7. Write a  function which will display all the records with only name & ages.
+        // function Name ---> findAll(users)
+        // HINT : Use map.
+        function findAll(users) {
+            let arr = users.map(n => ({
+                name: n.name,
+                age: n.age,
+            }));
+            console.log(arr);
+        }
+        findAll(users);
+        // Q8. Write a function to display sum of all ages of records having name starting with 'J'
+        function age(users) {
+            let s = users.filter(n => n.name.startsWith('J')).reduce((sum, n) => {
+                sum = sum + n.age;
+                return sum;
+            }, 0);
+            console.log(s);
+        }
+        age(users);
+        // Q9. Write a function which will display all the records in sorting according to names.
+        // function Name ---> Sorting(data,'ASC')
+        // ASC -> ASCENDING/ DESC -> DESCENDING
+        function sorting(users) {
+            let arr = users.sort((a, b) => {
+                if (a.name.toLowerCase() < b.name.toLowerCase()) {
+                    return -1;
+                }
+                if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                    return 1;
+                }
+                else {
+                    return 0;
+                }
+            })
+            console.log(arr);
+        }
+        sorting(users);
+        // Q10 Delete an object with specific array index.
+        // HINT : splice
+        // function : deleteRecord(users,1) // 1 means delete object with index 1 in array.
+        function deleteRecord(users) {
+            users.splice(1, 1);
+            console.log(users);
+        }
+        deleteRecord(users);
+        // Q11. Insert an object at specific array index.
+        // HINT : splice
+        // function : InsertRecord(users,temp,1) // 1 means inset object at index 1 in array.
+        function insertRecord(users, temp) {
+            users.splice(1, 0, temp);
+            console.log(users);
+        }
+        insertRecord(users, newUser);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

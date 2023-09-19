@@ -1,0 +1,5 @@
+.cont{
+    min-height:calc(100vh - 80px);
+    height: fit-content;
+    background-color: rgb(46, 26, 26);
+}

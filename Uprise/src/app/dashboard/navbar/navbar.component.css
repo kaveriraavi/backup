@@ -1,0 +1,12 @@
+.cont1{
+   border-right: 0.5px solid #F0F0F033;
+   min-height:calc(100vh - 80px);
+   height:fit-content;
+   overflow: hidden;
+}
+.cont1 a{
+    text-decoration: none;
+}
+.icon{
+    margin-left: 35px;
+}
